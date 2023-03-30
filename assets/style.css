@@ -1,3 +1,36 @@
+@font-face {
+	font-family: 'Spectral';
+	src: url('fonts/spectral/Spectral-ExtraBoldItalic.ttf ');
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Spectral';
+	src: url('fonts/spectral/Spectral-ExtraBold.ttf ');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Spectral';
+	src: url('fonts/spectral/Spectral-Italic.ttf ');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap
+} 
+@font-face {
+	font-family: 'Spectral';
+	src: url('fonts/spectral/Spectral-LightItalic.ttf ');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap
+}
+@font-face {
+	font-family: 'Inter';
+	src: url('fonts/inter/static/Inter-Regular.ttf');
+	font-display: swap
+}
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -40,6 +73,7 @@ body {
 
 .social-link img {
 	width: 20px;
+	height: 20px;
 }
 .active {
 	cursor: pointer;
@@ -50,6 +84,7 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	min-height: 768px;
 }
 
 .picture.left::before {
@@ -62,7 +97,10 @@ body {
 	left: 0;
 	z-index: -1;
 }
-
+.picture.left img{
+	max-height: 568px;
+	max-width: 570px;
+}
 .picture {
 	flex: 1;
 	margin: 0 20px;
@@ -70,8 +108,8 @@ body {
 }
 
 .picture img {
+	aspect-ratio: 1;
 	width: 100%;
-
 }
 #about-me {
 	flex: 2
@@ -92,9 +130,7 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -125,6 +161,8 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	width: 440;
+	height: 440;
 	object-fit: cover;
 	padding: .5em;
 }
@@ -146,13 +184,14 @@ body {
 	padding-block: 3em;
 }
 .quote__text {
-	font-family: Spectral;
+	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 2em;
+	line-height: 1.2;
 }
 .quote__author {
-	font-family: Spectral;
+	font-family: 'Spectral';
 	font-weight: 800;
 	font-size: 22px;
 }
@@ -212,6 +251,10 @@ body {
 	bottom: 0;
 	right: 0;
 	z-index: -1;
+}
+.picture.right img{
+	max-width: 420px;
+	max-height: 419px;
 }
 .form-container {
 	flex : 2;
@@ -355,4 +398,13 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
+.carousel-item img {
+	height: 100%;
+	width: 100%;
+	aspect-ratio: 1/0.4625;
+}
 
+.carousel-indicators {
+	width: 70%;
+	height: 23px;
+}
